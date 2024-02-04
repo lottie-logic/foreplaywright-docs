@@ -87,31 +87,28 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title:
-      "🎭 Seductively Simple Naming: Less Guesswork, More Pleasure in Testing",
+    title: "Seductively Simple Naming Conventions: Less Guesswork",
     Svg: "🎭",
     description: (
       <>
-        ForePlaywright teases out the complexity of Playwright, offering
-        function names that are as easy to grasp as they are hard to forget.
-        Crafted for immediate recall and minimal fuss, our library turns the
-        chore of test writing into an enticing experience. Step into an
-        intuitive testing session where efficiency meets allure, and writing
-        tests becomes as enjoyable as anticipating their flawless execution.
+        Teasing out the complexity of Playwright, offering function names that
+        are as easy to grasp as they are hard to forget. Crafted for immediate
+        recall and minimal fuss. Step into an intuitive testing session where
+        writing tests becomes as enjoyable as anticipating their flawless
+        execution.
       </>
     ),
   },
   {
-    title: "Enticing Documentation: Each Function, Unveiled with Charm",
+    title: "Enticing Documentation: Each Function, Explained in Full Detail",
     Svg: "📖",
     description: (
       <>
-        Dive into the depths of Playwright with ForePlaywright's provocatively
-        detailed documentation. Every utility is stripped down to its essentials
-        and presented with clarity, turning the mundane task of reading manuals
-        into a captivating exploration. Embrace the power to effortlessly
-        conquer testing challenges, armed with knowledge that's as engaging as
-        it is informative.
+        Every utility is stripped down to its essentials and presented with
+        clarity, turning the mundane task of reading manuals into a captivating
+        exploration. Embrace the power to effortlessly conquer testing
+        challenges, armed with knowledge that's as engaging as it is
+        informative.
       </>
     ),
   },
@@ -121,13 +118,10 @@ const FeatureList: FeatureItem[] = [
     Svg: "🧪",
     description: (
       <>
-        ForePlaywright invites you to flirt with testing success through our
-        straightforward, seductive syntax. Envision the test scenario,
-        articulate your desires in code, and watch as ForePlaywright responds
-        with precision and grace. Tailored for the eager beginner and the
-        experienced connoisseur alike, our library makes entering the spotlight
-        of quality assurance an affair to remember, simplifying testing with a
-        wink and a nod towards excellence.
+        Straightforward, seductive, clear syntax. Tailored for the eager
+        beginner and the experienced connoisseur alike, our library makes
+        entering the spotlight of quality assurance an affair to remember,
+        simplifying testing with a wink and a nod towards excellence.
       </>
     ),
   },

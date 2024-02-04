@@ -21,17 +21,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.heroImg {
-  /* object-fit: fill !important; */
-
-  scale: 170%;
-  z-index: 10;
-  height: 300px;
-}
-
-.heroImgContainer {
-  /* scale: 150%; */
-  height: 300px;
-  /* overflow: clip !important; */
-}

@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Master the Art of Automated Testing with ForePlaywright. Simple utility classes for testing with Playwright. Easily memorised and maintained.ForePlaywright: Simpler. Sexier. Testing Transformed.',
-  tagline: ' Step into testing with ease using ForePlaywright, your ensemble of utility functions tailored for Playwright testing. Our tools are designed for clarity and ease-of-use, enabling you to orchestrate end-to-end test performances with precision. Harmonize your testing process with our memorable and maintainable utilities, and take the lead role in driving quality assurance. Its time to take center stage - script your success with ForePlaywright today!"Set the stage for seductive scripting with ForePlaywright, the tantalizing toolkit for Playwright testing. Our collection of provocative utilities entices you into a world of effortless test creation, offering a prelude to seamless automation with a touch of allure. ForePlaywrights intuitive and easily maintained functions promise not just a quick fling with your code, but a lasting romance of reliability and performance. Surrender to the charm of clean, clear scripting that makes every test run a temptation too delightful to resist. With ForePlaywright, youre not just scripting tests; youre scripting desire. Prepare to get intimately acquainted with your code - ForePlaywright turns every test case into an irresistible dance of debugging delight.',
+  title: 'Master the Art of Automated Testing with Utility Functions for Playwright. Easily memorised and maintained.',
+  tagline: 'ForePlaywrights intuitive and easily maintained functions promise not just a quick fling with your code, but a lasting romance of reliability and performance. Surrender to the charm of clean, clear scripting that makes every test run a temptation too delightful to resist. Prepare to get intimately acquainted with your code',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
