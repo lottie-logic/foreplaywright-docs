@@ -1,3 +1,5 @@
+![Logo](https://foreplaywright.com/img/logo.png)
+
 # Welcome to the ForePlaywright Sensation! 🎭🍒
 
 Embrace the allure of testing with ForePlaywright, where each line of code entices and every function teases. Venture into a realm where automation isn't just about efficiency; it's an enticing play of logic and creativity. Are you prepared for a sultry journey through your scripts? Join us as we meld productivity with a hint of seduction, crafting a testing experience that's not only effective but irresistibly engaging. 🌶️💖 Get ready to ignite your testing routine with a spark of desire!
