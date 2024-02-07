@@ -11,9 +11,9 @@ import HomepageFeatures from "../components/HomepageFeatures";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero ", styles.heroBanner)}>
+    <header className={clsx("hero hero--primary ", styles.heroBanner)}>
       <div className="container">
-        <img height={"400px"} className={styles.heroImg} src="img/logo.png" />
+        <img height={"300px"} className={styles.heroImg} src="img/logo.png" />
 
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -21,10 +21,16 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--lg "
             to="/docs/introduction"
           >
-            Start Crafting Your Test Scripts
+            Learn foreplayright
+          </Link>
+          <Link
+            className="button button--primary button-border  button--lg"
+            to="/docs/locators/text"
+          >
+            Utility Reference
           </Link>
         </div>
       </div>

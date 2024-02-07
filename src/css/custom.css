@@ -13,5 +13,13 @@
   --ifm-color-primary-light: #c85a5a; /* Lighter Shade of Red */
   --ifm-color-primary-lighter: #e68a8a; /* Even Lighter Shade of Red */
   --ifm-color-primary-lightest: #ffbaba; /* Lightest Shade of Red */
-  --docusaurus-highlighted-code-line-bg: #c85a5a33; /* Highlighted Code Line Background */
+  --docusaurus-highlighted-code-line-bg: #c85a5a1b; /* Highlighted Code Line Background */
+}
+
+.button-border {
+  border: #3c0000 solid 1px;
+}
+
+.menu__link--sublist-caret:after {
+  display: none;
 }

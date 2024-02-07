@@ -21,11 +21,37 @@ const sidebars = {
             label: 'Getting Started 😉 ',
             items: ['getting-started/installation', 'getting-started/advanced-testing'],
         },
-        {
+            {
+      type: 'category',
+      label: 'Guides',
+      link: {
+        type: 'generated-index',
+        title: 'Docusaurus Guides',
+        description: 'Learn about the most important Docusaurus concepts!',
+        slug: '/locators/text',
+        keywords: ['guides'],
+        image: '/img/logo.png',
+      },
+      items: ['locators/text'],
+    },
+
+          {
             type: 'category',
-            label: 'Element Methods 👀 ',
-            items: ['elements/text', 'elements/heading', 'elements/link'],
+            label: 'Element Locators  👀 ',
+            items: ['locators/text', 'locators/heading', 'locators/link'],
         },
+
+
+         {
+            type: 'category',
+            label: 'Text  👀 ',
+            items: ['locators/text', ],
+        },
+        // {
+        //     type: 'category',
+        //     label: 'Element Methods 👀 ',
+        //     items: ['elements/text', 'elements/heading', 'elements/link'],
+        // },
     ],
 };
 exports.default = sidebars;

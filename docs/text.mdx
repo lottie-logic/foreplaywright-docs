@@ -1,0 +1,246 @@
+import { TabsBasic } from "../src/components/Tabs/TabsBasic";
+
+# Text
+
+## `getText`
+
+Check if a text content is visible on the page, identified by the string.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await getText(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await expect(page.getByText(<TEXT CONTENT>, { exact: true })).toBeVisible();`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [getTextPartialMatch](./button/#getTextPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { getText } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await getText(page, "Text content to check");
+}
+```
+
+## `getTextPartialMatch`
+
+Check if text content is visible on the page, identified by the text content itself.
+
+Your string doesn't have to be exact
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await getText(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await expect(page.getByText(<TEXT CONTENT>)).toBeVisible()`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { getTextPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await getTextPartialMatch(page, "Text content tO Ch");
+}
+```
+
+## `clickText`
+
+Click a piece of text that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await clickText(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByText(<TEXT CONTENT>, { exact: true }).click(); 
+await page.waitForLoadState("load");`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+Not only click the text but auto wait for the load to complete.
+
+This means the test will wait until the page is ready for the next action.
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [clickTextPartialMatch](./button/#clickTextPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { clickText } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await clickText(page, "Text Content to CLick");
+}
+```
+
+## `clickTextPartialMatch`
+
+Click a piece of text that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await clickTextPartialMatch(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByText(<TEXT CONTENT>).click(); 
+await page.waitForLoadState("load");`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+Not only click the text but auto wait for the load to complete.
+
+This means the test will wait until the page is ready for the next action.
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {5}
+import { clickTextPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await clickTextPartialMatch(page, "text conten");
+}
+```
+
+
+
+
+## `hoverText`
+
+Hover on a piece of text that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await hoverText(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByText(<TEXT CONTENT>, { exact: true }).hover(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [hoverTextPartialMatch](./button/#hoverTextPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { hoverText } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await hoverText(page, "Text Content to Hover");
+}
+```
+
+## `hoverTextPartialMatch`
+
+Hover on a piece of text that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await hoverTextPartialMatch(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByText(<TEXT CONTENT>).hover(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { hoverTextPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await hoverTextPartialMatch(page, "text conten");
+}
+```
+
+## `scrollToText`
+
+Scroll the page til this text is within the viewport.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await scrollToText(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByText(<TEXT CONTENT>, {exact: true}).scrollIntoViewIfNeeded(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [scrollToTextPartialMatch](./button/#scrollToTextPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { scrollToText } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await scrollToText(page, "Text Content to Scroll To");
+}
+```
+
+## `scrollToTextPartialMatch`
+
+Scroll the page til this text is within the viewport.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await scrollToTextPartialMatch(page, <TEXT CONTENT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByText(<TEXT CONTENT>).scrollIntoViewIfNeeded(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { scrollToTextPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await scrollToTextPartialMatch(page, "t to Scroll To");
+}
+```
+
+
+
+
+

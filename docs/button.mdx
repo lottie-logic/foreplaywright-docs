@@ -1,0 +1,241 @@
+import { TabsBasic } from "../src/components/Tabs/TabsBasic";
+
+# Button
+
+## `getButton`
+
+Check if a button is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await getButton(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await expect(page.getByRole("button", { name: <BUTTON TEXT>, exact: true })).toBeVisible();`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [getButtonPartialMatch](./button/#getButtonPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { getButton } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await getButton(page, "Text of your button");
+}
+```
+
+## `getButtonPartialMatch`
+
+Check if a button is visible on the page, identified by the text content.
+
+Your string doesn't have to be exact
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await getButton(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await expect(page.getByRole("button", { name: <BUTTON TEXT>})).toBeVisible();`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { getButtonPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await getButtonPartialMatch(page, "Text of your button");
+}
+```
+
+## `clickButton`
+
+Click a button that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await clickButton(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByRole("button", { name: <BUTTON TEXT>, exact: true }).click(); 
+await page.waitForLoadState("load");`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+Not only click the button but auto wait for the load to complete.
+
+This means the test will wait until the page is ready for the next action.
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [clickButtonPartialMatch](./button/#clickButtonPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { clickButton } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await clickButton(page, "Text of your button");
+}
+```
+
+## `clickButtonPartialMatch`
+
+Click a button that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await clickButtonPartialMatch(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByRole("button", { name: <BUTTON TEXT> }).click(); 
+await page.waitForLoadState("load");`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+Not only click the button but auto wait for the load to complete.
+
+This means the test will wait until the page is ready for the next action.
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { clickButtonPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await clickButtonPartialMatch(page, "text of yoUr buTt");
+}
+```
+
+
+
+## `hoverButton`
+
+Hover a button that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await hoverButton(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByRole("button", { name: <BUTTON TEXT>, exact: true }).hover(); `}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [hoverButtonPartialMatch](./button/#hoverButtonPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { hoverButton } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await hoverButton(page, "Text of your button");
+}
+```
+
+## `hoverButtonPartialMatch`
+
+Hover a button that is visible on the page, identified by the text content.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await hoverButtonPartialMatch(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByRole("button", { name: <BUTTON TEXT> }).hover(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { hoverButtonPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await hoverButtonPartialMatch(page, "text of yoUr buTt");
+}
+```
+
+
+## `scrollToButton`
+
+Scroll the page til this button is within the viewport.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await scrollToButton(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByRole("button", { name: <BUTTON TEXT>, exact: true }).scrollIntoViewIfNeeded(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+
+Make sure the string / number you add is **exact** (including correct case) otherwise this test will fail.
+
+Use [scrollToButtonPartialMatch](./button/#scrollToButtonPartialMatch) for a more leniant selector
+
+:::
+
+```javascript {4}
+import { scrollToButton } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await scrollToButton(page, "Text of your button");
+}
+```
+
+## `scrollToButtonPartialMatch`
+
+Scroll the page til this button is within the viewport.
+
+<TabsBasic
+  Tab1Label="Utility Function"
+  Tab1Content={`await scrollToButtonPartialMatch(page, <BUTTON TEXT>)`}
+  Tab2Label="Playwright"
+  Tab2Content={`await page.getByRole("button", { name: <BUTTON TEXT> }).scrollIntoViewIfNeeded(); 
+`}
+  Tab3Label="Parameters"
+  Tab3Content={"string | number"}
+/>
+
+:::tip
+Your parameter **does not** have to be a full string, or captialised correctly
+:::
+
+```javascript {4}
+import { scrollToButtonPartialMatch } from "foreplaywright";
+
+export async function layoutCheck(page) {
+  await scrollToButtonPartialMatch(page, "text of yoUr buTt");
+}
+```
