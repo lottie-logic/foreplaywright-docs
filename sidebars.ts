@@ -29,19 +29,20 @@ const sidebars = {
       // collapsible: false,
       collapsed: false,
       items: [
+        'text', 'heading','button', 'link'
         // 'creating-pages',
-        {
-          type: 'category',
-          // collapsible: false,
-          label: 'Typography',
-          items: ['text', 'heading'],
-        },
-         {
-          type: 'category',
-          // collapsible: false,
-          label: 'Buttons / Links',
-          items: ['button', 'link'],
-        },
+        // {
+        //   type: 'category',
+        //   // collapsible: false,
+        //   label: 'Typography',
+        //   items: ['text', 'heading'],
+        // },
+        //  {
+        //   type: 'category',
+        //   // collapsible: false,
+        //   label: 'Buttons / Links',
+        //   items: ['button', 'link'],
+        // },
       ],
 
 
